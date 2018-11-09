@@ -1,0 +1,28 @@
+{
+  "name": "ZNPlayer",
+  "version": "0.0.1",
+  "summary": "ZNPlayer",
+  "swift_version": "4.0",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/NixZhang5",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nix": "351235445@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/NixZhang5/ZNPlayer.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZNPlayer/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+      "~> 4.0.0"
+    ]
+  }
+}

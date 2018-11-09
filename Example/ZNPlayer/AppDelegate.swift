@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ZNPlayer
 //
-//  Created by 351235445@qq.com on 11/09/2018.
-//  Copyright (c) 2018 351235445@qq.com. All rights reserved.
+//  Created by Nix on 11/09/2018.
+//  Copyright (c) 2018 Nix. All rights reserved.
 //
 
 import UIKit

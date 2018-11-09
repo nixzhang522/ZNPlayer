@@ -1,0 +1,23 @@
+PODS:
+  - SnapKit (4.0.1)
+  - ZNPlayer (0.0.1):
+    - SnapKit (~> 4.0.0)
+
+DEPENDENCIES:
+  - ZNPlayer (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  ZNPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  ZNPlayer: 37f61c83fe752e75a8a97ad1abc962c5653d05b1
+
+PODFILE CHECKSUM: c01ab7cfa3d73c436a2ad922eb0f29427b81e4f8
+
+COCOAPODS: 1.5.3

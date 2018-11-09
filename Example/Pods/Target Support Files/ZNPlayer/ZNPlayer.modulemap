@@ -1,0 +1,6 @@
+framework module ZNPlayer {
+  umbrella header "ZNPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
