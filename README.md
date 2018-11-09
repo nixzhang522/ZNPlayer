@@ -1,29 +1,31 @@
 # ZNPlayer
 
-[![CI Status](https://img.shields.io/travis/351235445@qq.com/ZNPlayer.svg?style=flat)](https://travis-ci.org/351235445@qq.com/ZNPlayer)
-[![Version](https://img.shields.io/cocoapods/v/ZNPlayer.svg?style=flat)](https://cocoapods.org/pods/ZNPlayer)
-[![License](https://img.shields.io/cocoapods/l/ZNPlayer.svg?style=flat)](https://cocoapods.org/pods/ZNPlayer)
-[![Platform](https://img.shields.io/cocoapods/p/ZNPlayer.svg?style=flat)](https://cocoapods.org/pods/ZNPlayer)
+#### 项目介绍
+AVPlayer播放器学习~
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-ZNPlayer is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'ZNPlayer'
-```
+#### 版本记录
+- tag 0.0.3 基础播放功能
 
 ## Author
 
-351235445@qq.com, 351235445@qq.com
+Nix, 351235445@qq.com
 
-## License
 
-ZNPlayer is available under the MIT license. See the LICENSE file for more info.
+> 用到播放器的界面需要添加下面代码来旋转屏幕
+```
+// MARK: - 屏幕旋转
+extension PLPlayerViewController {
+
+override var shouldAutorotate: Bool {
+return false
+}
+
+override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+return .portrait
+}
+
+override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+return .portrait
+}
+}
+```
