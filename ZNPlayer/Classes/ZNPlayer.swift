@@ -174,6 +174,7 @@ public class ZNPlayer: UIView {
             self.player?.removeTimeObserver(timeObserve)
             self.timeObserve = nil
         }
+        self.playerState = .buffering
         self.createTimer()
         self.play()
     }
@@ -199,13 +200,18 @@ public class ZNPlayer: UIView {
     
     func seekToTime(seconds: Float, completionHandle: @escaping(_ finished: Bool) -> ()) {
         if self.playerItem?.status == .readyToPlay {
+            self.controlView?.zn_playerActivity(state: true)
             self.player?.pause()
             let dragedCMTime = CMTimeMake(Int64(seconds * 600), 600)
             self.player?.seek(to: dragedCMTime, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero, completionHandler: { [weak self] (finished) in
+                self?.controlView?.zn_playerActivity(state: false)
                 self?.player?.play()
                 self?.isDragged = false
                 self?.controlView?.zn_playerDraggedEnd()
                 completionHandle(finished)
+                if (self?.playerItem?.isPlaybackLikelyToKeepUp)! {
+                    self?.playerState = .buffering
+                }
             })
         }
     }

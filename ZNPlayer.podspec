@@ -35,6 +35,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'ZNPlayer/Classes/**/*'
   
   s.dependency 'SnapKit', '~> 4.0.0'
+  s.dependency 'TrafficPolice', '~> 1.0'
   
   # s.resource_bundles = {
   #   'ZNPlayer' => ['ZNPlayer/Assets/*.png']

@@ -1,7 +1,11 @@
 PODS:
   - SnapKit (4.0.1)
+  - SwiftTimer (2.0)
+  - TrafficPolice (1.1):
+    - SwiftTimer (~> 2.0)
   - ZNPlayer (0.0.1):
     - SnapKit (~> 4.0.0)
+    - TrafficPolice (~> 1.0)
 
 DEPENDENCIES:
   - ZNPlayer (from `../`)
@@ -9,6 +13,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SnapKit
+    - SwiftTimer
+    - TrafficPolice
 
 EXTERNAL SOURCES:
   ZNPlayer:
@@ -16,7 +22,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  ZNPlayer: 37f61c83fe752e75a8a97ad1abc962c5653d05b1
+  SwiftTimer: 4d25ff045d81c3132e1161a3ba2353d06ff63c30
+  TrafficPolice: 6f3acdad83776e8bb8171eb2b331232eb1b6419e
+  ZNPlayer: fc2e34ec51047db0990fcf98f17dd6c360950b15
 
 PODFILE CHECKSUM: c01ab7cfa3d73c436a2ad922eb0f29427b81e4f8
 

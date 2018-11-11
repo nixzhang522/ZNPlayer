@@ -287,11 +287,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZNPlayer_Example/Pods-ZNPlayer_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftTimer/SwiftTimer.framework",
+				"${BUILT_PRODUCTS_DIR}/TrafficPolice/TrafficPolice.framework",
 				"${BUILT_PRODUCTS_DIR}/ZNPlayer/ZNPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTimer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrafficPolice.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZNPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

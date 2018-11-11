@@ -55,6 +55,11 @@ public class ZNPlayerControlView: ZNBaseControlView {
         return button
     }()
     
+    lazy var activity: ZNLoadingView = {
+        var activity = ZNLoadingView.init(frame: CGRect.zero)
+        return activity
+    }()
+    
     /// 底部控制层背景
     lazy var bottomImageView: UIImageView = {
         var imageView = UIImageView.init(image: Bundle.bundleImage(named: "ZNPlayer_Bottom_Shadow"))
@@ -191,6 +196,7 @@ public class ZNPlayerControlView: ZNBaseControlView {
         super.init(frame: frame)
         self.addSubview(topImageView)
         self.addSubview(repeatButton)
+        self.addSubview(activity)
         self.addSubview(bottomImageView)
         
         topImageView.snp.makeConstraints { (make) in
@@ -201,6 +207,11 @@ public class ZNPlayerControlView: ZNBaseControlView {
         repeatButton.snp.makeConstraints { (make) in
             make.center.equalTo(self)
             make.size.equalTo(CGSize(width: 30, height: 45))
+        }
+        
+        activity.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+            make.width.height.equalTo(50)
         }
         
         bottomImageView.snp.makeConstraints { (make) in
@@ -339,6 +350,7 @@ extension ZNPlayerControlView {
     }
     
     @objc func zn_playerResetControlView() {
+        self.activity.stopAnimation()
         self.slider.value = 0
         self.bufferProgressView.progress = 0
         self.currentTimeLabel.text = "00:00";
@@ -349,7 +361,12 @@ extension ZNPlayerControlView {
     }
     
     @objc func zn_playerActivity(state: Bool) {
-        
+        if state {
+            activity.startAnimation()
+        }
+        else {
+            activity.stopAnimation()
+        }
     }
     
     
@@ -391,6 +408,7 @@ extension ZNPlayerControlView {
     }
     
     @objc func zn_playerDraggedTime(dragedSeconds: Float, totalTime: Float, isForward: Bool) {
+        self.activity.stopAnimation()
         isDragged = true
         let draggedValue = dragedSeconds / totalTime
         self.slider.value = draggedValue
@@ -399,7 +417,6 @@ extension ZNPlayerControlView {
     @objc func zn_playerDraggedEnd() {
         isDragged = false
     }
-    
     
 }
 
